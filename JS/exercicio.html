@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Aula</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+  <form onsubmit="return check()">
+    <label for="fname">E-mail:</label><br>
+    <input type="email" name="email" id="email" name="email" placeholder="E-Mail"><br>
+
+    <label for="Senha">Senha:</label><br>
+    <input type="password" name="senha" id="senha" name="senha" placeholder="Senha">
+    <input type="submit" value="Submit">
+  </form>
+
+  <div>
+    <p>E-Mail: email@aula.com</p>
+    <p>Senha: aula123</p>
+  </div>
+
+
+  <script>
+    function check() {
+      var email = "email@aula.com";
+      var senha = "aula123";
+
+      var emailDigitado = document.getElementById("email").value;
+
+      var senhaDigitada = document.getElementById("senha").value;
+
+      if ((email == emailDigitado
+      ) && (senha == senhaDigitada)) {
+        alert("Login feito com sucesso");
+      } else {
+        alert("Login Incorreto");
+      }
+    }
+  </script>
+
+</body>
+
+</html>
